@@ -1,0 +1,258 @@
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" href="Summative.css">
+	<script src="Summative.js" defer></script>
+</head>
+<body>
+	<div id="calculatorBox">
+		<div id="displayBox">
+			<div id="displayScreen">
+				0
+			</div>
+		</div>
+		<div id="buttonBox">
+			<div class="calculatorButtons operators ti-only" 
+			    style="--icon: url('Images/Buttons TI84/y=.png')">
+			</div>
+			<div class="calculatorButtons operators ti-only" 
+			    style="--icon: url('Images/Buttons TI84/window.png')">
+			</div>
+			<div class="calculatorButtons operators ti-only" 
+			    style="--icon: url('Images/Buttons TI84/zoom.png')">
+			</div>
+			<div class="calculatorButtons operators ti-only" 
+			    style="--icon: url('Images/Buttons TI84/trace.png')">
+			</div>
+			<div class="calculatorButtons operators ti-only" 
+			    style="--icon: url('Images/Buttons TI84/graph.png')">
+			</div>
+			<div class="calculatorButtons others ti-only" 
+			    style="--icon: url('Images/Buttons TI84/2nd.png')" onclick="this.style.filter = 'brightness(80%)'; second = 'true'">
+			</div>
+			<div class="calculatorButtons utility ti-only" 
+			    style="--icon: url('Images/Buttons TI84/mode.png')">
+			</div>
+			<div class="calculatorButtons utility ti-only"
+			    style="--icon: url('Images/Buttons TI84/del.png')" onclick="typer('delete')">
+			</div>
+			<div class="calculatorButtons ti-only arrowPad" style="--icon: url('Images/Buttons TI84/arrowPad.png');">
+			</div>
+			<div class="calculatorButtons others ti-only" 
+			    style="--icon: url('Images/Buttons TI84/alpha.png')">
+			</div>
+			<div class="calculatorButtons utility ti-only" 
+			    style="--icon: url('Images/Buttons TI84/X,T,θ,n.png')">
+			</div>
+			<div class="calculatorButtons utility ti-only" 
+			    style="--icon: url('Images/Buttons TI84/stat.png')">
+			</div>
+			<div class="calculatorButtons utility ti-only" 
+			    style="--icon: url('Images/Buttons TI84/math.png')">
+			</div>
+			<div class="calculatorButtons utility ti-only" 
+			    style="--icon: url('Images/Buttons TI84/apps.png')">
+			</div>
+			<div class="calculatorButtons utility ti-only" 
+			    style="--icon: url('Images/Buttons TI84/prgm.png')">
+			</div>
+			<div class="calculatorButtons utility ti-only" 
+			    style="--icon: url('Images/Buttons TI84/vars.png')">
+			</div>
+			<div class="calculatorButtons utility ti-only" 
+			    style="--icon: url('Images/Buttons TI84/clear.png')" onclick="clearCalc()">
+			</div>
+			<div class="calculatorButtons utility ti-only" 
+			    style="--icon: url('Images/Buttons TI84/x^-1.png')">
+			</div>
+			<div class="calculatorButtons utility ti-only" 
+			    style="--icon: url('Images/Buttons TI84/sin.png')">
+			</div>
+			<div class="calculatorButtons utility ti-only" 
+			    style="--icon: url('Images/Buttons TI84/cos.png')">
+			</div>
+			<div class="calculatorButtons utility ti-only" 
+			    style="--icon: url('Images/Buttons TI84/tan.png')">
+			</div>
+			<div class="calculatorButtons utility ti-only" 
+			    style="--icon: url('Images/Buttons TI84/^.png')" onclick="operationHandling('exponent')">
+			</div>
+			<div class="calculatorButtons utility ti-only" 
+			    style="--icon: url('Images/Buttons TI84/x^2.png')" onclick="if (second === 'false') {special('square')} else {special('sqrt')}">
+			</div>
+			<div class="calculatorButtons utility ti-only" 
+			    style="--icon: url('Images/Buttons TI84/,.png')">
+			</div>
+			<div class="calculatorButtons utility ti-only" 
+			    style="--icon: url('Images/Buttons TI84/(.png')">
+			</div>
+			<div class="calculatorButtons utility ti-only" 
+			    style="--icon: url('Images/Buttons TI84/).png')">
+			</div>
+
+			<div class="calculatorButtons operators ti-only" 
+			    style="--icon: url('Images/Buttons TI84/÷.png')" onclick="operationHandling('divide')">
+			</div>
+			<div class="calculatorButtons utility ti-only" 
+			    style="--icon: url('Images/Buttons TI84/log.png')">
+			</div>
+			<div class="calculatorButtons numbers ti-only" 
+			    style="--icon: url('Images/Buttons TI84/7.png')" onclick="typer('7')">
+			</div>
+			<div class="calculatorButtons numbers ti-only" 
+			    style="--icon: url('Images/Buttons TI84/8.png')" onclick="typer('8')">
+			</div>
+			<div class="calculatorButtons numbers ti-only" 
+			    style="--icon: url('Images/Buttons TI84/9.png')" onclick="typer('9')">
+			</div>
+			<div class="calculatorButtons operators ti-only" 
+			    style="--icon: url('Images/Buttons TI84/×.png')" onclick="operationHandling('multiply')">
+			</div>
+			<div class="calculatorButtons utility ti-only" 
+			    style="--icon: url('Images/Buttons TI84/ln.png')">
+			</div>
+			<div class="calculatorButtons numbers ti-only" 
+			    style="--icon: url('Images/Buttons TI84/4.png')" onclick="typer('4')">
+			</div>
+			<div class="calculatorButtons numbers ti-only" 
+			    style="--icon: url('Images/Buttons TI84/5.png')" onclick="typer('5')">
+			</div>
+			<div class="calculatorButtons numbers ti-only" 
+			    style="--icon: url('Images/Buttons TI84/6.png')" onclick="typer('6')">
+			</div>
+			<div class="calculatorButtons operators ti-only" 
+			    style="--icon: url('Images/Buttons TI84/−.png')" onclick="operationHandling('subtract')">
+			</div>
+			<div class="calculatorButtons utility ti-only" 
+			    style="--icon: url('Images/Buttons TI84/sto.png')">
+			</div>
+			<div class="calculatorButtons numbers ti-only" 
+			    style="--icon: url('Images/Buttons TI84/1.png')" onclick="typer('1')">
+			</div>
+			<div class="calculatorButtons numbers ti-only" 
+			    style="--icon: url('Images/Buttons TI84/2.png')" onclick="typer('2')">
+			</div>
+			<div class="calculatorButtons numbers ti-only" 
+			    style="--icon: url('Images/Buttons TI84/3.png')" onclick="typer('3')">
+			</div>
+			<div class="calculatorButtons operators ti-only" 
+			    style="--icon: url('Images/Buttons TI84/+.png')" onclick="operationHandling('add')">
+			</div>
+			<div class="calculatorButtons utility ti-only" 
+			    style="--icon: url('Images/Buttons TI84/on.png')">
+			</div>
+			<div class="calculatorButtons numbers ti-only" 
+			    style="--icon: url('Images/Buttons TI84/0.png')" onclick="typer('0')">
+			</div>
+			<div class="calculatorButtons numbers ti-only" 
+			    style="--icon: url('Images/Buttons TI84/decimal.png')" onclick="typer('.')">
+			</div>
+			<div class="calculatorButtons numbers ti-only" 
+			    style="--icon: url('Images/Buttons TI84/(-).png')" onclick="if (second === 'false') {special('negative')} else {typer('ans')}">
+			</div>
+			<div class="calculatorButtons operators ti-only" 
+			    style="--icon: url('Images/Buttons TI84/enter.png')" onclick="equals()">
+			</div>
+
+
+			<div class="calculatorButtons numbers light-only dark-only" onclick="typer('1');">1
+			</div>
+			<div class="calculatorButtons numbers light-only dark-only" onclick="typer('2');">2
+			</div>
+			<div class="calculatorButtons numbers light-only dark-only" onclick="typer('3');">3
+			</div>
+			<div class="calculatorButtons operators light-only dark-only" onclick="operationHandling('add')">+
+			</div>
+			<div class="calculatorButtons operators light-only dark-only" onclick="operationHandling('subtract')">−
+			</div>
+			<div class="calculatorButtons operators light-only dark-only" onclick="operationHandling('multiply')">×
+			</div>
+			<div class="calculatorButtons operators light-only dark-only" onclick="operationHandling('divide')">÷
+			</div>
+			<div class="calculatorButtons numbers light-only dark-only" onclick="typer('4');">4
+			</div>
+			<div class="calculatorButtons numbers light-only dark-only" onclick="typer('5');">5
+			</div>
+			<div class="calculatorButtons numbers light-only dark-only" onclick="typer('6');">6
+			</div>
+			<div class="calculatorButtons utility light-only dark-only" onclick="operationHandling('modulo');">%
+			</div>
+			<div class="calculatorButtons numbers light-only dark-only" onclick="special('negative')">+/-
+			</div>
+			<div class="calculatorButtons utility light-only dark-only" style="background-color: gray;" onclick="typer('delete');">⌫
+			</div>
+			<div class="calculatorButtons utility light-only dark-only" style="background-color: gray;" onclick="clearCalc();">AC
+			</div>
+			<div class="calculatorButtons numbers light-only dark-only" onclick="typer('7');">7
+			</div>
+			<div class="calculatorButtons numbers light-only dark-only" onclick="typer('8');">8
+			</div>
+			<div class="calculatorButtons numbers light-only dark-only" onclick="typer('9');">9
+			</div>
+			<div class="calculatorButtons numbers light-only dark-only" onclick="typer('0');">0
+			</div>
+			<div class="calculatorButtons numbers light-only dark-only" onclick="typer('.');">.
+			</div>
+			<div class="calculatorButtons light-only dark-only" style="background-color: gray;" onclick="equals()">=
+			</div>
+			<div class="calculatorButtons utility light-only dark-only" style="background-color: gray;" onclick="typer('ans')">ans
+			</div>
+			<div class="calculatorButtons blank light-only dark-only"></div><div class="calculatorButtons blank light-only dark-only"></div><div class="calculatorButtons blank light-only dark-only"></div><div class="calculatorButtons blank light-only dark-only"></div><div class="calculatorButtons blank light-only dark-only"></div><div class="calculatorButtons blank light-only dark-only"></div><div class="calculatorButtons blank light-only dark-only"></div>
+			<div class="calculatorButtons utility light-only dark-only" onclick="operationHandling('exponent')">^
+			</div>
+			<div class="calculatorButtons utility light-only dark-only" onclick="special('square')">x²
+			</div>
+			<div class="calculatorButtons utility light-only dark-only" onclick="special('sqrt')">√
+			</div>
+
+
+			<div class="calculatorButtons utility apple-only" onclick="typer('delete');">⌫
+			</div>
+			<div class="calculatorButtons utility apple-only" onclick="clearCalc();">AC
+			</div>
+			<div class="calculatorButtons utility apple-only" onclick="operationHandling('modulo');">%
+			</div>
+			<div class="calculatorButtons operators apple-only" onclick="operationHandling('divide')">÷
+			</div>
+			<div class="calculatorButtons numbers apple-only" onclick="typer('7');">7
+			</div>
+			<div class="calculatorButtons numbers apple-only" onclick="typer('8');">8
+			</div>
+			<div class="calculatorButtons numbers apple-only" onclick="typer('9');">9
+			</div>
+			<div class="calculatorButtons operators apple-only" onclick="operationHandling('multiply')">×
+			</div>
+			<div class="calculatorButtons numbers apple-only" onclick="typer('4');">4
+			</div>
+			<div class="calculatorButtons numbers apple-only" onclick="typer('5');">5
+			</div>
+			<div class="calculatorButtons numbers apple-only" onclick="typer('6');">6
+			</div>
+			<div class="calculatorButtons operators apple-only" onclick="operationHandling('subtract')">−
+			</div>
+			<div class="calculatorButtons numbers apple-only" onclick="typer('1');">1
+			</div>
+			<div class="calculatorButtons numbers apple-only" onclick="typer('2');">2
+			</div>
+			<div class="calculatorButtons numbers apple-only" onclick="typer('3');">3
+			</div>
+			<div class="calculatorButtons operators apple-only" onclick="operationHandling('add')">+
+			</div>
+			<div class="calculatorButtons numbers apple-only" onclick="special('negative')">+/-
+			</div>
+			<div class="calculatorButtons numbers apple-only" onclick="typer('0');">0
+			</div>
+			<div class="calculatorButtons numbers apple-only" onclick="typer('.');">.
+			</div>
+			<div class="calculatorButtons apple-only" onclick="equals()">=
+			</div>
+		</div>
+	</div>
+	<div id="skinSwapper">
+		<div class="swapperButtons apple" style="background-color: #FF8B00; color: white;" onclick="document.body.dataset.skin = ''">=</div>
+		<div class="swapperButtons ti84" style="background-color: #CDCDCD; color: black;  font-family: 'Helvetica Neue'; font-size: 20px;" onclick="document.body.dataset.skin = 'ti84'">enter</div>
+		<div class="swapperButtons light" style="background-color: white; border: 3px gray solid; color: black;" onclick="document.body.dataset.skin = 'light'">=</div>
+		<div class="swapperButtons dark" style="background-color: black; border: 3px white solid; color: white;" onclick="document.body.dataset.skin = 'dark'">=</div>
+	</div>
+</body>
+</html>
